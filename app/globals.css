@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-rust: #A04328;
+  --color-grey: #CBCAC2;
+  --color-terracotta: #BD6B46;
+  --color-sage: #97B29F;
+  --color-fern: #51624B;
+  --color-creme: #EFE9DB;
+  --bg-primary: #FAF7F2;
+  --text-primary: #24221D;
+  --text-muted: #5F5E56;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #BD6B46;
+    color: #FAF7F2;
+  }
+}
+
+/* Plaster and Earth Texture Overlay */
+.earth-grain {
+  background-image: radial-gradient(rgba(81, 98, 75, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.plaster-texture {
+  background-color: #FAF7F2;
+  background-image: 
+    radial-gradient(#BD6B46 0.5px, transparent 0.5px),
+    radial-gradient(#51624B 0.5px, #FAF7F2 0.5px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+  background-opacity: 0.03;
+}
+
+/* Organic Hand-Brushed Plaster Border & Wash */
+.brush-edge-rough {
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
+
+.brush-card-subtle {
+  background: rgba(250, 247, 242, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(189, 107, 70, 0.18);
+  box-shadow: 0 10px 30px -10px rgba(81, 98, 75, 0.08);
+}
+
+.brush-wash-glow {
+  filter: drop-shadow(0 0 25px rgba(189, 107, 70, 0.15));
+}
+
+/* Custom Architectural Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #EFE9DB;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #BD6B46;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A04328;
+}
+
+/* Glassmorphism for sustainable aesthetic */
+.clay-glass {
+  background: rgba(239, 233, 219, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(189, 107, 70, 0.15);
+}
+
+.fern-glass {
+  background: rgba(81, 98, 75, 0.9);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(151, 178, 159, 0.2);
+}
+
+.dark-earth-glass {
+  background: rgba(36, 34, 29, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(239, 233, 219, 0.12);
+}
+
+/* Image reveal hover transition */
+.image-reveal-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.image-reveal-card img {
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
+}
+
+.image-reveal-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Architectural typography utility */
+.heading-display {
+  font-family: var(--font-cormorant), Georgia, serif;
+  letter-spacing: -0.02em;
+}
+
+.text-editorial {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-style: italic;
+}
+
+.label-architectural {
+  font-family: var(--font-plus-jakarta), system-ui, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.75rem;
+}
